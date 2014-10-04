@@ -1,0 +1,91 @@
+<!DOCTYPE HTML PUBLIC "ISO/IEC 15445:2000//DTD HTML//EN">
+<html>
+<head>
+	<title>Life.js - Main</title>
+	<meta http-equiv="content-type" content="text/html;charset=utf-8" />
+
+</head>
+
+<body bgcolor="#000000" text="22ff22">
+	<center>
+		<img src="top.png"><br>
+
+		<br>
+		<canvas id= "LIFE" width="640" height="640"></canvas>
+    	<br>
+			<form name="ppp">
+			<input type="button" onclick="reset" value="reset"></input>
+			<input type="button" onclick="next" value="next"></input>
+			</form>
+	</center>
+
+	<script>
+
+		var s=10;
+		var pixin=32;
+
+		window.onload=function (){
+			canvas = document.getElementById('LIFE');
+				/* canvas要素の存在チェックとCanvas未対応ブラウザの対処 */
+			if ( ! canvas || ! canvas.getContext ) {
+				return false;
+			}
+			var pix = prompt("フィールドのサイズを入力してください","");
+			pixn =Number(pix);
+			life[pixin*pixin];
+			var i=0;
+			var x=0;
+			var y=0;
+			for(i,i<=pixin,i++){
+			x=Math.round(Math.random()*pixin);
+			y=Math.round(Math.random()*pixin);
+			life[y+x*pixin]
+			}
+			draw();
+
+
+		}
+		canvas.onmousedown=function HndMouse(e){
+
+		}
+
+		function next(){
+			alert("next");
+			draw(pixin);
+		}
+
+		function reset(){
+			var pix = prompt("フィールドのサイズを入力してください","");
+			pixnt = Number(pix);
+			draw(pixin);
+		}
+		function Getnext{
+
+		}
+		function draw() {
+			var s=320/pixin;
+			var ctx = canvas.getContext('2d');
+			/* 四角を描く */
+			ctx.strokeStyle='rgb(0,255,0)';
+			ctx.fillStyle='rgb(0,255,0)';
+			var i=0;
+			var j=0;
+			for(i,i<=n,i++){
+				for(j,j<=n,j++){
+					if(life[j*pixin+i]==1){
+						ctx.fillRect(i*s,j*s,s,s);
+					}
+					else{
+						ctx.strokeRect(i*s,j*s,s,s);
+					}
+				}
+			}
+
+		}
+
+	</script>
+	<hr>
+	<small><pre>Copyright 2014 Haruki Baba <h24m33@edu.hachinohe-ct.ac.jp></pre></small>
+</body>
+
+</html>
