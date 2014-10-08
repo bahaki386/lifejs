@@ -32,28 +32,7 @@
 		if ( ! canvas || ! canvas.getContext ) {
 			return false;
 		}
-		var pix = prompt("フィールドのサイズを入力してください","");
-		pixn =Number(pix);
-		life = new Array(pixin);
-		var i=0;
-		var j=0;
-		for (i = 0; i < pixin; i++) {
-			life[i] = new Array(pixin);
-		}
-		i=0;
-		for(i=0;i<pixin;i++){
-			for(j=0;j<pixin;j++){
-				life[i][j]=0;
-			}
-		}
-		var x=0;
-		var y=0;
-		for(i=0;i<pixin;i++){
-		x=Math.round(Math.random()*(pixin-1));
-		y=Math.round(Math.random()*(pixin-1));
-		life[x][y]=1;
-		}
-		draw();
+		reset();
 	}
 
 	canvas.onmousedown=HndMouse;
@@ -80,7 +59,26 @@
 	}
 	function reset(){
 		var pix = prompt("フィールドのサイズを入力してください","");
-		pixnt = Number(pix);
+		pixn =Number(pix);
+		life = new Array(pixin);
+		var i=0;
+		var j=0;
+		for (i = 0; i < pixin; i++) {
+			life[i] = new Array(pixin);
+		}
+		i=0;
+		for(i=0;i<pixin;i++){
+			for(j=0;j<pixin;j++){
+				life[i][j]=0;
+			}
+		}
+		var x=0;
+		var y=0;
+		for(i=0;i<pixin;i++){
+		x=Math.round(Math.random()*(pixin-1));
+		y=Math.round(Math.random()*(pixin-1));
+		life[x][y]=1;
+		}
 		draw();
 	}
 	function getNext(){
