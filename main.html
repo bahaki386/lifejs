@@ -56,7 +56,7 @@
 		}
 		var x=0;
 		var y=0;
-		for(i=0;i<(pixin*(pixin/4));i++){
+		for(i=0;i<(Math.ceil((pixin*pixin)/3));i++){
 		x=Math.round(Math.random()*(pixin-1));
 		y=Math.round(Math.random()*(pixin-1));
 		life[x][y]=1;
