@@ -26,7 +26,7 @@ resetByZero=function(){
 	i=0;
 	for(i=0;i<pixin;i++){
 		for(j=0;j<pixin;j++){
-life[i][j]=0;
+			life[i][j]=0;
 		}
 	}
 	gen=1;
@@ -49,15 +49,15 @@ reset = function (){
 	i=0;
 	for(i=0;i<pixin;i++){
 		for(j=0;j<pixin;j++){
-life[i][j]=0;
+			life[i][j]=0;
 		}
 	}
 	var x=0;
 	var y=0;
-	for(i=0;i<(Math.ceil((pixin*pixin)/3));i++){
-	x=Math.round(Math.random()*(pixin-1));
-	y=Math.round(Math.random()*(pixin-1));
-	life[x][y]=1;
+	for(i=0;i<(Math.ceil((pixin*pixin)/2.5));i++){
+		x=Math.round(Math.random()*(pixin-1));
+		y=Math.round(Math.random()*(pixin-1));
+		life[x][y]=1;
 	}
 	gen=1;
 	draw();
