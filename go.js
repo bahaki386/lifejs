@@ -1,0 +1,1 @@
+document.location = "main.html"; 
