@@ -73,7 +73,7 @@ window.onload=function (){
 	document.getElementById('reset').addEventListener('click', function(evt) { reset(); });
 	document.getElementById('start').addEventListener('click', function(evt) { t=setInterval("next()",100); });
 	document.getElementById('stop').addEventListener('click', function(evt) { clearInterval(t); });
-
+	document.getElementById('exit').addEventListener('click', function(evt) { document.location = "index.html"; });
 	reset();
 }
 
