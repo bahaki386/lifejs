@@ -73,7 +73,7 @@ window.onload=function (){
 	document.getElementById('reset').addEventListener('click', function(evt) { reset(); });
 	hbs=document.getElementById('start');
 	hbst=document.getElementById('stop');
-	hbs.addEventListener('click', function(evt) { hbst.disabled=false;setInterval("next()",100); hbs.disabled=true;});
+	hbs.addEventListener('click', function(evt) { hbst.disabled=false;t=setInterval("next()",100); hbs.disabled=true;});
 	hbst.addEventListener('click', function(evt) { hbst.disabled=true;clearInterval(t); hbs.disabled=false});
 	document.getElementById('exit').addEventListener('click', function(evt) { document.location = "index.html"; });
 	reset();
