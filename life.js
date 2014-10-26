@@ -71,8 +71,10 @@ window.onload=function (){
 	document.getElementById('next').addEventListener('click', function(evt) { next(); });
 	document.getElementById('zero').addEventListener('click', function(evt) { resetByZero(); });
 	document.getElementById('reset').addEventListener('click', function(evt) { reset(); });
-	document.getElementById('start').addEventListener('click', function(evt) { t=setInterval("next()",100); });
-	document.getElementById('stop').addEventListener('click', function(evt) { clearInterval(t); });
+	hbs=document.getElementById('start');
+	hbst=document.getElementById('stop');
+	hbs.addEventListener('click', function(evt) { hbst.disabled=false;setInterval("next()",100); hbs.disabled=true;});
+	hbst.addEventListener('click', function(evt) { hbst.disabled=true;clearInterval(t); hbs.disabled=false});
 	document.getElementById('exit').addEventListener('click', function(evt) { document.location = "index.html"; });
 	reset();
 }
