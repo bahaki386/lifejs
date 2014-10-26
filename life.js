@@ -74,7 +74,7 @@ window.onload=function (){
 	hbs=document.getElementById('start');
 	hbst=document.getElementById('stop');
 	hbs.addEventListener('click', function(evt) { hbst.disabled=false;t=setInterval("next()",100); hbs.disabled=true;});
-	hbst.addEventListener('click', function(evt) { hbst.disabled=true;clearInterval(t); hbs.disabled=false});
+	hbst.addEventListener('click', function(evt) { hbst.disabled=true;clearInterval(t); t=null; hbs.disabled=false});
 	document.getElementById('exit').addEventListener('click', function(evt) { document.location = "index.html"; });
 	reset();
 }
