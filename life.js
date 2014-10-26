@@ -11,10 +11,10 @@ next=function (){
 }
 
 resetByZero=function(){
-				var pix = prompt("フィールドのサイズを入力してください","32");
+	var pix = prompt("フィールドのサイズを入力してください(1~128)",);
 	pixin = Number(pix);
 	while((!(pixin>0))||pixin<0||pixin>128){
-		pix = prompt("フィールドのサイズを入力してください","32");
+		pix = prompt("フィールドのサイズを入力してください(1~128)",);
 		pixin = Number(pix);
 	}
 	life = new Array(pixin);
@@ -34,10 +34,10 @@ resetByZero=function(){
 }
 reset = function (){
 	var pix;
-	pix = prompt("フィールドのサイズを入力してください","32");
+	pix = prompt("フィールドのサイズを入力してください(1~128)",);
 	pixin = Number(pix);
 	while((!(pixin>0))||pixin<0||pixin>128){
-		pix = prompt("フィールドのサイズを入力してください","32");
+		pix = prompt("フィールドのサイズを入力してください(1~128)",);
 		pixin = Number(pix);
 	}
 	life = new Array(pixin);
