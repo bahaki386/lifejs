@@ -91,29 +91,8 @@ function HndMouse(e){
 		else{
 			life[posX][posY]=1;
 		}
-				}
-/*	else{
-		if (mouseX<60){
-			resetByZero();
-		}
-		else if((mouseX<120)&&(mouseX>60)){
-			flag_start=true;
-			flag_stop=false;
-			nPlay();
-		}
-		else if((mouseX<180)&&(mouseX>120)){
-			flag_stop=true;
-		}
-		else if((mouseX>260)&&(mouseX<380)){
-			if(mouseX<320){
-				reset();
-			}
-			else{
-				next();
-			}
-		}
 	}
-*/	draw(pixin);
+	draw(pixin);
 }
 
 function adjustXY(e) {
@@ -193,7 +172,7 @@ function getNext(){
 	gen++;
 }
 
-	function draw() {
+function draw() {
 	s=640/pixin;
 	var ctx = canvas.getContext('2d');
 	/* セルを描く */
@@ -214,6 +193,5 @@ function getNext(){
 		}
 	}
 	ctx.font = "bold 25px 'ＭＳ ゴシック'";
-
 	ctx.fillText("世代:"+gen,525,665);
 }
