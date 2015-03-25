@@ -1,6 +1,13 @@
+@font-face
+{
+	font-family: mplus-2m-regular;
+	src: url('http://mplus-fonts.sourceforge.jp/webfonts/mplus-2m-regular.ttf')
+	     format("truetype");
+}
 body{
 	background-color:#000000;
 	color:#22ff22;
+	font-family: mplus-2m-regular,monoscape;
 }
 #center{
 	text-align:center;
