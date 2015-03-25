@@ -192,6 +192,6 @@ function draw() {
 			}
 		}
 	}
-	ctx.font = "bold 25px 'ＭＳ ゴシック'";
+	ctx.font = "bold 25px mplus-2m-regular";
 	ctx.fillText("世代:"+gen,525,665);
 }
