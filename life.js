@@ -4,13 +4,14 @@ var canvas=document.getElementById('LIFE');
 var flag_start=false;
 var flag_stop=true;
 var t;
+var mouseX,mouseY;
 
-next=function (){
+var next=function (){
 	getNext();
 	draw();
 }
 
-resetByZero=function(){
+var resetByZero=function(){
 	var pix = prompt("フィールドのサイズを入力してください(1~128)","");
 	pixin = Number(pix);
 	while((!(pixin>0))||pixin<0||pixin>128){
@@ -32,7 +33,7 @@ resetByZero=function(){
 	gen=1;
 	draw();
 }
-reset = function (){
+var reset = function (){
 	var pix;
 	pix = prompt("フィールドのサイズを入力してください(1~128)","");
 	pixin = Number(pix);
@@ -71,8 +72,8 @@ window.onload=function (){
 	document.getElementById('next').addEventListener('click', function(evt) { next(); });
 	document.getElementById('zero').addEventListener('click', function(evt) { resetByZero(); });
 	document.getElementById('reset').addEventListener('click', function(evt) { reset(); });
-	hbs=document.getElementById('start');
-	hbst=document.getElementById('stop');
+	var hbs=document.getElementById('start');
+	var hbst=document.getElementById('stop');
 	hbs.addEventListener('click', function(evt) { hbst.disabled=false;t=setInterval("next()",100); hbs.disabled=true;});
 	hbst.addEventListener('click', function(evt) { hbst.disabled=true;clearInterval(t); t=null; hbs.disabled=false});
 	document.getElementById('exit').addEventListener('click', function(evt) { document.location = "index.html"; });
@@ -83,8 +84,8 @@ canvas.onmousedown=HndMouse;
 function HndMouse(e){
 	adjustXY(e);
 	if(mouseY<640){
-		posX=Math.floor(mouseX/s);
-		posY=Math.floor(mouseY/s);
+		var posX=Math.floor(mouseX/s);
+		var posY=Math.floor(mouseY/s);
 		if(life[posX][posY]==1){
 			life[posX][posY]=0;
 		}
