@@ -69,13 +69,20 @@ window.onload=function (){
 	if ( ! canvas || ! canvas.getContext ) {
 		return false;
 	}
-	document.getElementById('next').addEventListener('click', function(evt) { next(); });
-	document.getElementById('zero').addEventListener('click', function(evt) { resetByZero(); });
-	document.getElementById('reset').addEventListener('click', function(evt) { reset(); });
+	var hbn=document.getElementById('next');
+	var hbr=document.getElementById('zero');
+	var hbrz=document.getElementById('reset');
 	var hbs=document.getElementById('start');
 	var hbst=document.getElementById('stop');
+	hbr.addEventListener('click', function(evt) { resetByZero(); });
+	hbn.addEventListener('click', function(evt) { next(); });
+	hbrz.addEventListener('click', function(evt) { reset(); });
 	hbs.addEventListener('click', function(evt) { hbst.disabled=false;t=setInterval("next()",100); hbs.disabled=true;});
 	hbst.addEventListener('click', function(evt) { hbst.disabled=true;clearInterval(t); t=null; hbs.disabled=false});
+	hbst.addEventListener('click', function(evt) { hbst.disabled=true;clearInterval(t); t=null; hbs.disabled=false});
+	hbn.addEventListener('click', function(evt) { hbst.disabled=true;clearInterval(t); t=null; hbs.disabled=false});
+	hbr.addEventListener('click', function(evt) { hbst.disabled=true;clearInterval(t); t=null; hbs.disabled=false});
+	hbrz.addEventListener('click', function(evt) { hbst.disabled=true;clearInterval(t); t=null; hbs.disabled=false});
 	document.getElementById('exit').addEventListener('click', function(evt) { document.location = "index.html"; });
 	reset();
 }
