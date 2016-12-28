@@ -9,6 +9,12 @@ body{
 	color:#22ff22;
 	font-family: mplus-2m-regular,monoscape;
 }
+
+a:link { color: #2222ff; }
+a:visited { color: #ff2222; }
+a:hover { color: #00ffff; }
+a:active { color: #008fff; }
+
 #center{
 	text-align:center;
 }
