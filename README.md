@@ -27,6 +27,8 @@ OKボタンをクリックする事によってメイン画面に進むことが
 
 ## 素材
 - BGM 「Ice Cave」
-  - [煉獄庭園様](http://www.rengoku-teien.com/index.html)
-- フォント 「M+」
-  - [M+ Web Font Project様](http://mplus-webfonts.osdn.jp/)
+  - 煉獄庭園様
+    - [http://www.rengoku-teien.com](http://www.rengoku-teien.com)
+- フォント 「M+」 
+  - M+ Web Fonts Project様
+    - [http://mplus-webfonts.osdn.jp/](http://mplus-webfonts.osdn.jp)
