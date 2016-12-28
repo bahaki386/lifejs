@@ -31,4 +31,4 @@ OKボタンをクリックする事によってメイン画面に進むことが
     - [http://www.rengoku-teien.com](http://www.rengoku-teien.com)
 - フォント 「M+」 
   - M+ Web Fonts Project様
-    - [http://mplus-webfonts.osdn.jp/](http://mplus-webfonts.osdn.jp)
+    - [http://mplus-webfonts.osdn.jp](http://mplus-webfonts.osdn.jp)
