@@ -124,32 +124,32 @@ function getNext(){
 		for(i=0;i<pixin;i++){
 			if(j==0){
 				if(i==0){
-					tmp=life[i+1][j]+life[i][j+1]+life[i+1][j+1];
+					tmp=life[i+1][j]+life[i][j+1]+life[i+1][j+1]+life[pixin-1][pixin-1]+life[pixin-1][j]+life[pixin-1][j+1]+life[i][pixin-1]+life[i+1][pixin-1];
 				}
 				else if(i==(pixin-1)){
-					tmp=life[i-1][j]+life[i-1][j+1]+life[i][j+1];
+					tmp=life[i-1][j]+life[i-1][j+1]+life[i][j+1]+life[0][pixin-1]+life[0][j]+life[0][j+1]+life[i-1][pixin-1]+life[i][pixin-1];
 				}
 				else{
-					tmp=life[i-1][j]+life[i+1][j]+life[i-1][j+1]+life[i][j+1]+life[i+1][j+1];
+					tmp=life[i-1][j]+life[i+1][j]+life[i-1][j+1]+life[i][j+1]+life[i+1][j+1]+life[i-1][pixin-1]+life[i+1][pixin-1]+life[i][pixin-1];
 				}
 			}
 			else if(j==(pixin-1)){
 				if(i==0){
-					tmp=life[i][j-1]+life[i+1][j-1]+life[i+1][j];
+					tmp=life[i][j-1]+life[i+1][j-1]+life[i+1][j]+life[i][0]+life[i+1][0]+life[pixin-1][j-1]+life[pixin-1][0]+life[pixin-1][j];
 				}
 				else if(i==(pixin-1)){
-					tmp=life[i-1][j-1]+life[i][j-1]+life[i-1][j];
+					tmp=life[i-1][j-1]+life[i][j-1]+life[i-1][j]+life[0][0]+life[0][j-1]+life[0][j]+life[i-1][0]+life[i][0];
 				}
 				else{
-					tmp=life[i-1][j-1]+life[i][j-1]+life[i+1][j-1]+life[i-1][j]+life[i+1][j];
+					tmp=life[i-1][j-1]+life[i][j-1]+life[i+1][j-1]+life[i-1][j]+life[i+1][j]+life[i-1][0]+life[i][0]+life[i+1][0];
 				}
 			}
 			else{
 				if(i==0){
-					tmp=life[i][j-1]+life[i+1][j-1]+life[i+1][j]+life[i][j+1]+life[i+1][j+1];
+					tmp=life[i][j-1]+life[i+1][j-1]+life[i+1][j]+life[i][j+1]+life[i+1][j+1]+life[pixin-1][j-1]+life[pixin-1][j]+life[pixin-1][j+1];
 				}
 				else if(i==(pixin-1)){
-					tmp=life[i-1][j-1]+life[i][j-1]+life[i-1][j]+life[i-1][j+1]+life[i][j+1];
+					tmp=life[i-1][j-1]+life[i][j-1]+life[i-1][j]+life[i-1][j+1]+life[i][j+1];life[0][j]+life[0][j-1]+life[0][j+1];
 				}
 				else{
 					tmp=life[i-1][j-1]+life[i][j-1]+life[i+1][j-1]+life[i-1][j]+life[i+1][j]+life[i-1][j+1]+life[i][j+1]+life[i+1][j+1];
