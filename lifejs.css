@@ -1,13 +1,14 @@
-@font-face
-{
-	font-family: mplus-2m-regular;
-	src: url('http://mplus-fonts.sourceforge.jp/webfonts/mplus-2m-regular.ttf')
-	     format("truetype");
+@font-face{ 
+	font-family: 'mplus-1mn-regular';
+	src: url('http://mplus-webfonts.sourceforge.jp/mplus-1mn-regular.eot');
+	src: url('http://mplus-webfonts.sourceforge.jp/mplus-1mn-regular.eot?#iefix') format('embedded-opentype'),
+		 url('http://mplus-webfonts.sourceforge.jp/mplus-1mn-regular.woff') format('woff'),
+		 url('http://mplus-webfonts.sourceforge.jp/mplus-1mn-regular.ttf') format('truetype');
 }
 body{
 	background-color:#000000;
 	color:#22ff22;
-	font-family: mplus-2m-regular,monoscape;
+	font-family:'mplus-1mn-regular','monoscape';
 }
 
 a:link { color: #2222ff; }
