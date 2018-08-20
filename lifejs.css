@@ -6,7 +6,7 @@
 		 url('http://mplus-webfonts.sourceforge.jp/mplus-1mn-regular.ttf') format('truetype');
 }
 body{
-	background-color:#000000;
+	background-color:#101010;
 	color:#22ff22;
 	font-family:'mplus-1mn-regular','monoscape';
 }
